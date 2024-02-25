@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'MainPage.apps.MainPageConfig',
 ]
 
 MIDDLEWARE = [
@@ -92,7 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "ru-ru"
 
-TIME_ZONE = "UTC+3"
+TIME_ZONE = "Europe/Moscow"
 
 USE_I18N = True
 
