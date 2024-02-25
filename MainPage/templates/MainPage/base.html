@@ -2,10 +2,13 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Editorial by HTML5 UP</title>
+		<title>{% block title %}Medical AI{% endblock %}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static "MainPage/css/main.css" %}" />
+		{% block stylesheets %}
+		{% endblock %}
+		
 	</head>
 	<body class="is-preload">
 {% block main %}
@@ -112,6 +115,8 @@
 			<script src="{% static "MainPage/js/breakpoints.min.js" %}"></script>
 			<script src="{% static "MainPage/js/util.js" %}"></script>
 			<script src="{% static "MainPage/js/main.js" %}"></script>
+			{% block scripts %}
+			{% endblock %}
 
 	</body>
 </html>
