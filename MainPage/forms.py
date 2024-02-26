@@ -7,7 +7,10 @@ __all__ = (
 
 
 class ParamtersForm(forms.Form):
-    # sex = forms.ChoiceField(choices=['1', '2'])
+    sex = forms.ChoiceField(choices=(
+        (1, 'Male'),
+        (2, 'Female')
+    ))
     age = forms.DecimalField(max_value=150)
     IN_T = forms.FloatField(min_value=0)
     IN_P = forms.FloatField(min_value=0)
