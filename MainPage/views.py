@@ -44,7 +44,6 @@ class DiseaseChecker(View):
         form = ParamtersForm(request.POST)
         if form.is_valid():
             cleaned = form.cleaned_data
-            print(cleaned)
             cleaned['age'] = int(cleaned['age'])
             cleaned['sex'] = int(cleaned['sex'])
             cleaned = {key.replace('_', ' '): value for key, value in cleaned.items()}
@@ -53,3 +52,5 @@ class DiseaseChecker(View):
                 featurespace=self._featurespace,
                 parameters=cleaned
             ))
+        else:
+            return await self.get(request)
